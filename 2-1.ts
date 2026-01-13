@@ -7,7 +7,7 @@
 // 4. API Response: success(boolean), data(generic), error(optional string)
 interface TUser  {
   name : string,
-  id : number,
+  id ?: number,
   email : string,
   age ?: number
 }
