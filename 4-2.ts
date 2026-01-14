@@ -38,5 +38,12 @@ emitter.on("click", (event) => {
     console.log(event.x, event.y);  // 타입 추론됨
 });
 
+emitter.on("click", (event) =>{
+    console.log(event.x*event.y)
+})
+emitter.on("keydown", (event) => {
+    console.log("key 값은 " + event.key + " code 값은 " + event.code);
+})
+
 emitter.emit("keydown", { key: "Enter", code: "Enter" });
 emitter.emit("click", { x: 100, y: 200 });
